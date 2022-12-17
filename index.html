@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+  <div id="app">
+    <!-- 3-1和3-4 -->
+    <section class="description">
+      <div class="container text-center">
+        <h2 class="tit-type1 text-center" title="聚焦4重點">
+          <div class="text-red pb-2">
+            聚焦4重點
+          </div>
+        </h2>
+      </div>
+    </section>
+    <section class="tabItemArea">
+      <div class="container">
+        <ul class="tab tab-lg">
+          <li :class="{'active': tab5 }"
+            @click="tab5 = true; tab6 = false; tab7 = false; tab8 = false; ">
+            <img src="images/tab3-1bk.webp" alt="" class="tab-btn">
+            <img src="images/tab3-1.webp" alt="" class="tab-btn active">
+          </li>
+          <li :class="{'active': tab6 }"
+            @click="tab6 = true; tab5 = false; tab7 = false; tab8 = false; ">
+            <img src="images/tab3-2bk.webp" alt="" class="tab-btn">
+            <img src="images/tab3-2.webp" alt="" class="tab-btn active">
+          </li>
+
+          <li :class="{'active': tab7 }"
+            @click="tab7 = true; tab5 = false; tab6 = false; tab8 = false; ">
+            <img src="images/tab3-3bk.webp" alt="" class="tab-btn">
+            <img src="images/tab3-3.webp" alt="" class="tab-btn active">
+          </li>
+          <li :class="{'active': tab8 }"
+            @click="tab8 = true; tab5 = false; tab6 = false; tab7 = false; ">
+            <img src="images/tab3-4bk.webp" alt="" class="tab-btn">
+            <img src="images/tab3-4.webp" alt="" class="tab-btn active">
+          </li>
+
+        </ul>
+        <div class="tab-contant">
+
+          <article v-if="tab5">
+            <section class="item2" data-aos="fade-up">
+              <div class="chart">
+                <div class="discountGroup discountGroup-sm">
+                  <div class="flex">
+                    <div class="block">
+                      <div class="block-card">
+                        <div class="txt">
+                          <h3 class="chart-tit text-blue" title="全球最高的金融科技採用率">
+                            全球最高的金融科技採用率
+                          </h3>
+                          <p class="text-center">
+                            印度是<b style="color:#fe0000;">世界上增長最快的金融科技市場之一</b>。印度的金融科技採用率達87%，遠高於全球平均水平 64%
+                          </p>
+                        </div>
+                        <img src="images/chart3-1a.svg" alt="" class="chart-img chart-img-sm">
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div class="block-card">
+                        <div class="txt">
+                          <h3 class="chart-tit text-blue" title="民生金融越趨活躍">
+                            民生金融越趨活躍
+                          </h3>
+                          <p class="text-center">
+                            <b style="color:#fe0000;">印度儲蓄力高</b>，SIP(退休基金)持續成長，刺激金融發展。
+                          </p>
+                        </div>
+                        <img src="images/chart3-1b.svg" alt="" class="chart-img chart-img-sm">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-remark chart-remark-lg">
+                <p>資料來源︰NATIOAL INVESTMENT PROMOTION<br> & FACILITATION AGENCY,2022/7</p>
+                <p>資料來源︰高盛證券，2022/11/11</p>
+              </div>
+            </section>
+          </article>
+
+          <article v-else-if="tab6">
+            <section class="item2" data-aos="">
+              <div class="chart">
+                <div class="discountGroup discountGroup-sm">
+                  <div class="flex">
+                    <div class="block">
+                      <div class="block-card">
+                        <div class="txt">
+                          <h3 class="chart-tit text-blue" title="國民消費 大增長">
+                            國民消費 大增長
+                          </h3>
+                          <p class="text-center">
+                            國內市場消費稅收<b style="color:#fe0000;">5年內成長58%</b>，持續創高
+                          </p>
+                        </div>
+                        <img src="images/chart3-2a.svg" alt="" class="chart-img chart-img-sm">
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div class="block-card">
+                        <div class="txt">
+                          <h3 class="chart-tit text-blue" title="印度人口紅利大勝中國">
+                            印度人口紅利大勝中國
+                          </h3>
+                          <p class="text-center">
+                            印度中產階級人口超越中國，達3.7億人，成為<b style="color:#fe0000;">亞洲區最大消費與勞動市場。</b>
+                          </p>
+                        </div>
+                        <img src="images/chart3-2b.svg" alt="" class="chart-img chart-img-sm">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-remark chart-remark-lg">
+                <p>資料來源︰NATIOAL INVESTMENT PROMOTION FACILITATION AGENCY,2022/7</p>
+                <p>資料來源︰高盛證券，2022/11/11</p>
+              </div>
+            </section>
+          </article>
+
+          <article v-else-if="tab7">
+            <section class="item2" data-aos="">
+              <div class="chart">
+                <div class="discountGroup discountGroup-sm">
+                  <div class="flex">
+                    <div class="block">
+                      <div class="block-card">
+                        <div class="txt">
+                          <h3 class="chart-tit text-blue" title="藥品產量全球排名第三">
+                            藥品產量全球排名第三
+                          </h3>
+                          <p class="text-center">
+                            同時擁有<b style="color:#fe0000;">世界上最大</b>的疫苗生產商、學名藥供應商，佔全球供應量的 20%；印度還擁有美國以外<b
+                              style="color:#fe0000;">最多符合美國 FDA
+                              要求的製藥廠</b>數量。
+                          </p>
+                        </div>
+                        <img src="images/chart3-3a.svg" alt="" class="chart-img chart-img-sm">
+                      </div>
+                    </div>
+                    <div class="block">
+                      <div class="block-card">
+                        <div class="txt">
+                          <h3 class="chart-tit text-blue" title="「半導體印度計畫」（Semicon India Program)">
+                            「半導體印度計畫」
+                            <br>（Semicon India Program)
+                          </h3>
+                          <p class="text-center">
+                            印度擁有全球<b style="color:#fe0000;">20%的半導體人才</b>，2022年政府批准<b
+                              style="color:#fe0000;">100億美元</b>的 Semicon India
+                            專案，升級在地半導體產業。
+                          </p>
+                        </div>
+                        <img src="images/chart3-3b.png" alt="" class="chart-img chart-img-sm">
+                      </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+              <div class="chart-remark chart-remark-lg">
+                <p>資料來源︰NATIOAL INVESTMENT PROMOTION <br>& FACILITATION AGENCY,2022/11</p>
+                <p>資料來源︰富蘭克林證券投顧整理</p>
+              </div>
+            </section>
+          </article>
+
+          <article v-else>
+            <section class="item2" data-aos="">
+              <div class="chart">
+                <div class="discountGroup discountGroup-sm">
+                  <div class="flex">
+                    <div class="block-100">
+                      <div class="block-card">
+                        <div class="txt">
+                          <h3 class="chart-tit text-blue" title="「GATI SHAKTI擴大基建計畫」">
+                            「GATI SHAKTI擴大基建計畫」
+                          </h3>
+                          <p class="text-center">
+                            規劃<b style="color:#fe0000;">投資1.2兆美元</b>，升級航空、海運、公共交通、鐵路、公路和高速公路等，促進產品出口及經濟發展。
+                          </p>
+                        </div>
+                        <img src="images/chart3-4.png" alt="強勢美元有利美國營收較高的股票" class="chart-img chart-img-sm">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-remark chart-remark-lg">
+                <p class="text">資料來源： NICDC</p>
+              </div>
+            </section>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.4/vue.global.min.js"></script>
+<script >
+  const { ref } = Vue;
+  const App = {
+    setup() {
+
+      const tab1 = ref(true);
+      const tab2 = ref(false);
+
+      const tab3 = ref(true);
+      const tab4 = ref(false);
+
+      const tab5 = ref(true);
+      const tab6 = ref(false);
+      const tab7 = ref(false);
+      const tab8 = ref(false);
+
+      return {
+        tab1,
+        tab2,
+
+        tab3,
+        tab4,
+
+        tab5,
+        tab6,
+        tab7,
+        tab8,
+      };
+    },
+  };
+  Vue.createApp(App).mount("#app");
+</script>
+</body>
+</html>
